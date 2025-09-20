@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TrueLeafTech</title>
+    <meta name="description" content="Get in touch with TrueLeafTech for expert Amazon VA services. Contact us for a free consultation or custom quote.">
+    <meta name="keywords" content="contact trueleaftech, amazon va contact, free consultation, amazon virtual assistant">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .contact-form-section {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form-section h2 {
+            color: #1a3c34;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a3c34;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2e6b5a;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .revenue-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .revenue-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .revenue-option input[type="radio"] {
+            width: auto;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #2e6b5a, #1a3c34);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .calendar-section {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .calendar-section h2 {
+            color: #1a3c34;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .calendar-placeholder {
+            background: white;
+            border: 2px dashed #2e6b5a;
+            border-radius: 10px;
+            padding: 3rem;
+            margin: 2rem 0;
+            color: #666;
+        }
+        
+        .calendar-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .calendar-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a3c34, #2e6b5a);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 1rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2MVMDXN6T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2MVMDXN6T');
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">TrueLeafTech</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amazon-ppc-management.html">Amazon PPC Management</a></li>
+                            <li><a href="amazon-listing-optimization.html">Listing Optimization</a></li>
+                            <li><a href="amazon-posts-social-media.html">Amazon Posts & Social Media</a></li>
+                            <li><a href="amazon-customer-service-management.html">Amazon Customer Service Management</a></li>
+                            <li><a href="amazon-product-research-services.html">Amazon Product Research Services</a></li>
+                            <li><a href="amazon-review-management-services.html">Amazon Review Management Services</a></li>
+                            <li><a href="amazon-account-audit-health-services.html">Amazon Account Audit & Health Services</a></li>
+                            <li><a href="amazon-fba-returns-reimbursement-services.html">Amazon FBA Returns & Reimbursement Services</a></li>
+                            <li><a href="walmart-marketplace-management-services.html">Walmart Marketplace Management Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="free-audit.html" class="btn btn-small">Free Audit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-contact">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>Ready to scale your Amazon business? Let's discuss your goals and create a custom strategy.</p>
+            </div>
+        </section>
+
+        <div class="contact-container">
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form" class="contact-form" action="https://formsubmit.co/saugata.1987@gmail.com" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company/Brand Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Monthly Amazon Revenue *</label>
+                        <div class="revenue-options">
+                            <div class="revenue-option">
+                                <input type="radio" id="revenue1" name="monthlyRevenue" value="Under $10,000" required>
+                                <label for="revenue1">Under $10,000</label>
+                            </div>
+                            <div class="revenue-option">
+                                <input type="radio" id="revenue2" name="monthlyRevenue" value="$10,000 - $50,000">
+                                <label for="revenue2">$10,000 - $50,000</label>
+                            </div>
+                            <div class="revenue-option">
+                                <input type="radio" id="revenue3" name="monthlyRevenue" value="$50,000 - $100,000">
+                                <label for="revenue3">$50,000 - $100,000</label>
+                            </div>
+                            <div class="revenue-option">
+                                <input type="radio" id="revenue4" name="monthlyRevenue" value="$100,000 - $500,000">
+                                <label for="revenue4">$100,000 - $500,000</label>
+                            </div>
+                            <div class="revenue-option">
+                                <input type="radio" id="revenue5" name="monthlyRevenue" value="$500,000 - $1,000,000">
+                                <label for="revenue5">$500,000 - $1,000,000</label>
+                            </div>
+                            <div class="revenue-option">
+                                <input type="radio" id="revenue6" name="monthlyRevenue" value="Over $1,000,000">
+                                <label for="revenue6">Over $1,000,000</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="services">Which services are you interested in? *</label>
+                        <select id="services" name="services" required>
+                            <option value="">Select a service</option>
+                            <option value="Amazon PPC Management">Amazon PPC Management</option>
+                            <option value="Listing Optimization">Listing Optimization</option>
+                            <option value="Account Management">Account Management</option>
+                            <option value="Inventory Management">Inventory Management</option>
+                            <option value="Brand Store Creation">Brand Store Creation</option>
+                            <option value="Amazon Posts & Social Media">Amazon Posts & Social Media</option>
+                            <option value="Analytics & Reporting">Analytics & Reporting</option>
+                            <option value="Multiple Services">Multiple Services</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">How can we help you grow your Amazon business?</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your current challenges and goals..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">When would you like to get started?</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="Immediately">Immediately</option>
+                            <option value="Within 1 month">Within 1 month</option>
+                            <option value="1-3 months">1-3 months</option>
+                            <option value="3-6 months">3-6 months</option>
+                            <option value="Just exploring options">Just exploring options</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="calendar-section">
+                <h2>Schedule a Call</h2>
+                <p>Prefer to talk directly? Schedule a free 30-minute consultation with our Amazon experts.</p>
+                
+<div class="calendly-inline-widget" data-url="https://calendly.com/saugata-halder87/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                
+                <div style="margin-top: 2rem;">
+                    <h4>What to expect:</h4>
+                    <ul style="text-align: left; max-width: 300px; margin: 1rem auto;">
+                        <li>✅ Free Amazon account analysis</li>
+                        <li>✅ Personalized growth strategy</li>
+                        <li>✅ Custom service recommendations</li>
+                        <li>✅ No obligation consultation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Other Ways to Reach Us</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>hello@trueleaftech.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🕒</span>
+                        <span>Mon-Fri: 9AM-6PM EST</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TrueLeafTech. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="header-scroll.js"></script>
+    <script>
+        // AJAX form submission to prevent redirection
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Submit form via AJAX
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    showSuccessMessage();
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please try again.');
+            })
+            .finally(() => {
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+        
+        function showSuccessMessage() {
+            // Create success modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                text-align: center;
+                max-width: 400px;
+                margin: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            `;
+            
+            modalContent.innerHTML = `
+                <div style="color: #2e6b5a; font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                <h3 style="color: #1a3c34; margin-bottom: 1rem;">Message Sent Successfully!</h3>
+                <p style="color: #666; margin-bottom: 1.5rem;">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                <button onclick="this.closest('.modal').remove()" style="
+                    background: linear-gradient(135deg, #2e6b5a, #1a3c34);
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    font-weight: 600;
+                ">Close</button>
+            `;
+            
+            modal.className = 'modal';
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

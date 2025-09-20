@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Posts & Social Media - TrueLeafTech</title>
+    <meta name="description" content="Boost engagement and drive traffic with expert Amazon Posts and social media management. Professional content creation and strategic campaigns.">
+    <meta name="keywords" content="amazon posts, amazon social media, social commerce, amazon brand engagement, social media marketing">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="social" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="white" opacity="0.1"/><rect x="20" y="20" width="10" height="10" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23social)"/></svg>');
+        }
+        
+        .service-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .service-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .social-showcase {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .post-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .post-example {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .post-example:hover {
+            transform: translateY(-10px);
+        }
+        
+        .post-image {
+            height: 200px;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .post-content {
+            padding: 1.5rem;
+        }
+        
+        .engagement-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #ff9a9e;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .social-platforms {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .platform-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .platform-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content-calendar {
+            padding: 4rem 0;
+        }
+        
+        .calendar-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .calendar-day {
+            aspect-ratio: 1;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .calendar-day.has-post {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .calendar-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2MVMDXN6T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2MVMDXN6T');
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">TrueLeafTech</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                        <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amazon-ppc-management.html">Amazon PPC Management</a></li>
+                            <li><a href="amazon-listing-optimization.html">Listing Optimization</a></li>
+                            <li><a href="amazon-posts-social-media.html">Amazon Posts & Social Media</a></li>
+                            <li><a href="amazon-customer-service-management.html">Amazon Customer Service Management</a></li>
+                            <li><a href="amazon-product-research-services.html">Amazon Product Research Services</a></li>
+                            <li><a href="amazon-review-management-services.html">Amazon Review Management Services</a></li>
+                            <li><a href="amazon-account-audit-health-services.html">Amazon Account Audit & Health Services</a></li>
+                            <li><a href="amazon-fba-returns-reimbursement-services.html">Amazon FBA Returns & Reimbursement Services</a></li>
+                            <li><a href="walmart-marketplace-management-services.html">Walmart Marketplace Management Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="free-audit.html" class="btn btn-small">Free Audit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="container">
+                <h1>Amazon Posts & Social Media</h1>
+                <p>Amplify your brand presence and drive engagement with strategic Amazon Posts and integrated social media campaigns that convert followers into customers.</p>
+                <a href="contact.html" class="btn">Boost My Engagement</a>
+            </div>
+        </section>
+
+        <section class="social-showcase">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Engaging Content That Drives Results</h2>
+                <div class="post-examples">
+                    <div class="post-example">
+                        <div class="post-image">Product Lifestyle Shot</div>
+                        <div class="post-content">
+                            <h3>Behind the Scenes Content</h3>
+                            <p>Authentic storytelling that connects with your audience and builds brand trust through genuine moments.</p>
+                            <div class="engagement-stats">
+                                <span>❤️ 1.2K Likes</span>
+                                <span>💬 89 Comments</span>
+                                <span>🔄 156 Shares</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-example">
+                        <div class="post-image">User Generated Content</div>
+                        <div class="post-content">
+                            <h3>Customer Success Stories</h3>
+                            <p>Showcase real customer experiences and testimonials to build social proof and encourage purchases.</p>
+                            <div class="engagement-stats">
+                                <span>❤️ 2.1K Likes</span>
+                                <span>💬 143 Comments</span>
+                                <span>🔄 298 Shares</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-example">
+                        <div class="post-image">Educational Content</div>
+                        <div class="post-content">
+                            <h3>How-To & Tips</h3>
+                            <p>Educational content that provides value while subtly promoting your products and establishing expertise.</p>
+                            <div class="engagement-stats">
+                                <span>❤️ 856 Likes</span>
+                                <span>💬 67 Comments</span>
+                                <span>🔄 124 Shares</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 style="text-align: center; margin: 3rem 0 2rem;">Our Social Media Services</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📱 Amazon Posts Strategy</h3>
+                    <p>Strategic Amazon Posts campaigns that drive traffic directly to your product listings and increase brand visibility.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎨 Content Creation</h3>
+                    <p>High-quality visual content, engaging captions, and compelling calls-to-action that resonate with your target audience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📅 Content Calendar Management</h3>
+                    <p>Strategic content planning and scheduling to maintain consistent brand presence across all platforms.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Community Management</h3>
+                    <p>Active engagement with your audience, responding to comments, and building meaningful relationships with customers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Performance Analytics</h3>
+                    <p>Detailed analytics and reporting to track engagement, reach, and conversion metrics across all campaigns.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Influencer Partnerships</h3>
+                    <p>Strategic collaborations with relevant influencers to expand reach and build authentic brand advocacy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-platforms">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Multi-Platform Integration</h2>
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <div class="platform-icon">🛒</div>
+                        <h3>Amazon Posts</h3>
+                        <p>Native Amazon content that drives direct traffic to your product listings and brand store.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">📘</div>
+                        <h3>Facebook</h3>
+                        <p>Build community and drive traffic through engaging Facebook posts and targeted advertising.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">📷</div>
+                        <h3>Instagram</h3>
+                        <p>Visual storytelling that showcases your products in lifestyle settings and builds brand aesthetic.</p>
+                    </div>
+                    <div class="platform-card">
+                        <div class="platform-icon">🎵</div>
+                        <h3>TikTok</h3>
+                        <p>Creative short-form content that captures attention and drives viral engagement with younger audiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-calendar">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Strategic Content Planning</h2>
+                <div class="calendar-preview">
+                    <h3>Sample Content Calendar</h3>
+                    <p>We create comprehensive content calendars that ensure consistent posting and strategic campaign timing.</p>
+                    <div class="calendar-grid">
+                        <div class="calendar-day">Mon</div>
+                        <div class="calendar-day">Tue</div>
+                        <div class="calendar-day">Wed</div>
+                        <div class="calendar-day">Thu</div>
+                        <div class="calendar-day">Fri</div>
+                        <div class="calendar-day">Sat</div>
+                        <div class="calendar-day">Sun</div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day has-post">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day has-post">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day has-post">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day has-post">9</div>
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day has-post">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day has-post">13</div>
+                        <div class="calendar-day">14</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 4rem 0; text-align: center;">
+            <h2>Ready to Amplify Your Social Presence?</h2>
+            <p style="font-size: 1.2rem; margin: 1rem 0 2rem;">Let our social media experts help you build a thriving community and drive more sales through strategic content.</p>
+            <a href="contact.html" class="btn" style="font-size: 1.1rem; padding: 15px 30px;">Start Your Campaign</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TrueLeafTech. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .post-example, .platform-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Animate calendar days
+        document.querySelectorAll('.calendar-day.has-post').forEach((day, index) => {
+            setTimeout(() => {
+                day.style.animation = 'pulse 1s ease-in-out';
+            }, index * 200);
+        });
+    </script>
+</body>
+</html>
+

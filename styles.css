@@ -1,0 +1,1561 @@
+/* General Body and Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1a3c34;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #2e6b5a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2e6b5a;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: #1a3c34;
+    text-decoration: none;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+nav ul li:last-child {
+    margin-left: 15px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #1a3c34;
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+nav {
+    margin-left: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: inherit;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #2e6b5a;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2e6b5a;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 0 50px 0; /* Reduced from 120px/80px to 80px/50px */
+    min-height: 25vh; /* Reduced from 30vh to 25vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-homepage {
+    min-height: 50vh; /* Half height for homepage hero */
+    padding: 0;
+}
+
+.hero-about {
+    background: linear-gradient(rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.7)), url('./images/hero_about.png') no-repeat center center/cover;
+}
+
+.hero-services {
+    background: linear-gradient(rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.7)), url('./images/hero_services.png') no-repeat center center/cover;
+}
+
+.hero-testimonials {
+    background: linear-gradient(rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.7)), url('./images/hero_testimonials.png') no-repeat center center/cover;
+}
+
+.hero-pricing {
+    background: linear-gradient(rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.7)), url('./images/hero_pricing.png') no-repeat center center/cover;
+}
+
+.hero-faq {
+    background: linear-gradient(rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.7)), url('./images/hero_faq.png') no-repeat center center/cover;
+}
+
+.hero-contact {
+    background: linear-gradient(rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.7)), url('./images/hero_contact.png') no-repeat center center/cover;
+}
+
+.hero-free-audit {
+    background: linear-gradient(rgba(26, 60, 52, 0.7), rgba(26, 60, 52, 0.7)), url('./images/hero_free_audit.png') no-repeat center center/cover;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 56px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+section {
+    padding: 40px 0; /* Reduced from 60px to 40px */
+}
+
+section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px; /* Reduced from 50px to 30px */
+}
+
+/* Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Reduced from 40px to 25px */
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Testimonials */
+.testimonial-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #1a3c34;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: #1a3c34;
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    margin-left: 20px;
+}
+
+footer ul li a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #a8e6cf;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #1a3c34;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    header .container {
+        flex-wrap: nowrap;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer ul {
+        margin-top: 15px;
+    }
+
+    footer ul li {
+        margin: 0 10px;
+    }
+
+    .testimonial-slider {
+        flex-direction: column;
+    }
+
+    .testimonial-item {
+        margin-right: 0;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    .service-grid, .benefit-grid, .pricing-grid, .why-choose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: 300px; /* Adjusted for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .service-item, .benefit-item, .plan-card, .reason-item {
+        padding: 20px;
+    }
+
+    .accordion-header {
+        font-size: 16px;
+    }
+}
+
+
+
+/* New Service Hero Images */
+.hero-amazon-customer-service-management {
+    background-image: url('images/hero_amazon_customer_service_management.png');
+}
+
+.hero-amazon-product-research-services {
+    background-image: url('images/hero_amazon_product_research_services.png');
+}
+
+.hero-amazon-review-management-services {
+    background-image: url('images/hero_amazon_review_management_services.png');
+}
+
+.hero-amazon-account-audit-health-services {
+    background-image: url('images/hero_amazon_account_audit_health_services.png');
+}
+
+.hero-amazon-suspension-appeal-reinstatement-services {
+    background-image: url('images/hero_amazon_suspension_appeal_reinstatement_services.png');
+}
+
+.hero-amazon-product-photography-design-services {
+    background-image: url('images/hero_amazon_product_photography_design_services.png');
+}
+
+.hero-amazon-trademark-brand-registry-services {
+    background-image: url('images/hero_amazon_trademark_brand_registry_services.png');
+}
+
+.hero-amazon-fba-returns-reimbursement-services {
+    background-image: url('images/hero_amazon_fba_returns_reimbursement_services.png');
+}
+
+.hero-amazon-vendor-central-management-services {
+    background-image: url('images/hero_amazon_vendor_central_management_services.png');
+}
+
+.hero-walmart-marketplace-management-services {
+    background-image: url('images/hero_walmart_marketplace_management_services.png');
+}
+
+.hero-tiktok-shop-management-services {
+    background-image: url('images/hero_tiktok_shop_management_services.png');
+}
+
+.hero-shopify-store-management-services {
+    background-image: url('images/hero_shopify_store_management_services.png');
+}
+
+.hero-multi-platform-inventory-management-services {
+    background-image: url('images/hero_multi_platform_inventory_management_services.png');
+}
+
+.hero-omnichannel-ecommerce-advertising-services {
+    background-image: url('images/hero_omnichannel_ecommerce_advertising_services.png');
+}
+
+.hero-ecommerce-logistics-fulfillment-services {
+    background-image: url('images/hero_ecommerce_logistics_fulfillment_services.png');
+}
+
+/* Additional service section colors for the main services page */
+.customer-service-section {
+    --service-color: #667eea;
+    --service-color-alt: #764ba2;
+}
+
+.product-research-section {
+    --service-color: #4facfe;
+    --service-color-alt: #00f2fe;
+}
+
+.review-management-section {
+    --service-color: #43e97b;
+    --service-color-alt: #38f9d7;
+}
+
+.account-audit-section {
+    --service-color: #fa709a;
+    --service-color-alt: #fee140;
+}
+
+.suspension-appeal-section {
+    --service-color: #a8edea;
+    --service-color-alt: #fed6e3;
+}
+
+.photography-design-section {
+    --service-color: #ff9a9e;
+    --service-color-alt: #fecfef;
+}
+
+.trademark-brand-registry-section {
+    --service-color: #ffecd2;
+    --service-color-alt: #fcb69f;
+}
+
+.fba-returns-reimbursement-section {
+    --service-color: #667eea;
+    --service-color-alt: #764ba2;
+}
+
+.vendor-central-section {
+    --service-color: #4facfe;
+    --service-color-alt: #00f2fe;
+}
+
+.walmart-marketplace-section {
+    --service-color: #43e97b;
+    --service-color-alt: #38f9d7;
+}
+
+.tiktok-shop-section {
+    --service-color: #fa709a;
+    --service-color-alt: #fee140;
+}
+
+.shopify-store-section {
+    --service-color: #a8edea;
+    --service-color-alt: #fed6e3;
+}
+
+.multi-platform-inventory-section {
+    --service-color: #ff9a9e;
+    --service-color-alt: #fecfef;
+}
+
+.omnichannel-advertising-section {
+    --service-color: #ffecd2;
+    --service-color-alt: #fcb69f;
+}
+
+.logistics-fulfillment-section {
+    --service-color: #667eea;
+    --service-color-alt: #764ba2;
+}
+
+
+
+/* Case Study Hero Images */
+.hero-case-study-steamtech {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_portable_steamer.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-ethical-footwear {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_urbangrow_solutions.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-wellness-device {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_ecoclean_innovations.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-outdoor-equipment {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_freshbite_organics.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-tech-accessories {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_techgear_pro.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-nutrition {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_luxeliving_home.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-beauty {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_greenthumb_gardens.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-pet-accessory {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_autorevive_parts.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-casual-footwear {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_globalconnect_solutions.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-health-advisory {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_freshfinds_market.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-vendorlink {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_vendorlink_solutions.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-brandguard {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_brandguard_solutions.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-case-study-globalconnect {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/case_study_swiftship_logistics.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Inline Service Links */
+.inline-service-link {
+    color: #2e6b5a;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.inline-service-link:hover {
+    color: #1a3c34;
+    border-bottom-color: #2e6b5a;
+    text-decoration: none;
+}
+
+
+
+/* Updated Trusted Brands Section with Logo Images */
+.trusted-brands .brand-logo img {
+    max-width: 100%;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.trusted-brands .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trusted-brands .brand-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Updated Awards Section with Logo Images */
+.awards .award-item img {
+    max-width: 100%;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: brightness(1.1);
+}
+
+.awards .award-item {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.awards .award-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+}
+
+.awards .award-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.awards .award-item p {
+    opacity: 0.9;
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+/* New Pricing Page Styles */
+
+/* Section Subtitles */
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 25px; /* Reduced from 40px to 25px */
+    font-weight: 400;
+}
+
+/* E-commerce Pricing Plans Grid */
+.pricing-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px; /* Reduced from 60px to 40px */
+}
+
+.plan-card-new {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.plan-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-color: #2e6b5a;
+}
+
+.plan-card-new.featured {
+    border-color: #2e6b5a;
+    box-shadow: 0 10px 25px rgba(46, 107, 90, 0.15);
+}
+
+.plan-card-new.exclusive {
+    border-color: #d4af37;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+}
+
+.plan-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #2e6b5a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.plan-card-new.exclusive .plan-badge {
+    background: #d4af37;
+}
+
+.plan-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px 25px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.plan-card-new.featured .plan-header {
+    background: linear-gradient(135deg, #2e6b5a 0%, #1a3c34 100%);
+    color: white;
+}
+
+.plan-card-new.exclusive .plan-header {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: white;
+}
+
+.plan-header h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.plan-target {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.plan-card-new.featured .plan-target,
+.plan-card-new.exclusive .plan-target {
+    color: rgba(255,255,255,0.8);
+}
+
+.plan-price {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2e6b5a;
+    margin-bottom: 5px;
+}
+
+.plan-card-new.featured .plan-price,
+.plan-card-new.exclusive .plan-price {
+    color: white;
+}
+
+.plan-price span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.plan-card-new.featured .plan-price span,
+.plan-card-new.exclusive .plan-price span {
+    color: rgba(255,255,255,0.8);
+}
+
+.plan-alt-price {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.plan-card-new.featured .plan-alt-price,
+.plan-card-new.exclusive .plan-alt-price {
+    color: rgba(255,255,255,0.8);
+}
+
+.plan-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a3c34;
+    margin-bottom: 0;
+}
+
+.plan-card-new.featured .plan-value,
+.plan-card-new.exclusive .plan-value {
+    color: white;
+}
+
+.plan-services {
+    padding: 25px;
+}
+
+.plan-services h4 {
+    font-size: 18px;
+    color: #1a3c34;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.plan-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.plan-services li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.plan-services li:last-child {
+    border-bottom: none;
+}
+
+.plan-services li strong {
+    color: #2e6b5a;
+    font-weight: 600;
+}
+
+.btn-plan {
+    width: 100%;
+    margin: 0 25px 25px 25px;
+    width: calc(100% - 50px);
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+/* Additional Packages Grid */
+.additional-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px; /* Reduced from 60px to 40px */
+}
+
+.package-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.package-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #2e6b5a;
+}
+
+.package-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.package-header h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    color: #1a3c34;
+}
+
+.package-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2e6b5a;
+    margin-bottom: 15px;
+}
+
+.package-price span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+.package-value {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.package-services {
+    padding: 20px;
+}
+
+.package-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.package-services li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.package-services li:last-child {
+    border-bottom: none;
+}
+
+.package-services li strong {
+    color: #2e6b5a;
+    font-weight: 600;
+}
+
+.btn-package {
+    width: 100%;
+    margin: 0 20px 20px 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* Pricing Notes Section */
+#pricing-notes {
+    background: #f8f9fa;
+    padding: 35px 0; /* Reduced from 50px to 35px */
+    margin: 40px 0; /* Reduced from 60px to 40px */
+    border-radius: 12px;
+}
+
+.pricing-notes-content h2 {
+    text-align: center;
+    margin-bottom: 25px; /* Reduced from 40px to 25px */
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.note-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.note-item h3 {
+    font-size: 18px;
+    color: #1a3c34;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.note-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #2e6b5a 0%, #1a3c34 100%);
+    color: white;
+    padding: 40px 0; /* Reduced from 60px to 40px */
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: white;
+    color: #2e6b5a;
+    border: 2px solid white;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #2e6b5a;
+}
+
+/* Mobile Responsiveness for New Pricing */
+@media (max-width: 768px) {
+    .pricing-grid-new {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .additional-packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .notes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .plan-header {
+        padding: 20px 15px;
+    }
+    
+    .plan-services {
+        padding: 20px 15px;
+    }
+    
+    .package-header {
+        padding: 20px 15px;
+    }
+    
+    .package-services {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-price {
+        font-size: 28px;
+    }
+    
+    .package-price {
+        font-size: 24px;
+    }
+    
+    .cta-section h2 {
+        font-size: 24px;
+    }
+    
+    .cta-section p {
+        font-size: 16px;
+    }
+}
+
+/* Horizontal Scrolling Awards Section */
+.awards-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    margin: 0 -20px;
+}
+
+.awards-scroll {
+    display: flex;
+    gap: 30px;
+    padding: 0 20px;
+    min-width: max-content;
+}
+
+.awards-scroll .award-item {
+    flex: 0 0 auto;
+    width: 280px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.awards-scroll .award-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #2e6b5a;
+}
+
+.awards-scroll .award-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.awards-scroll .award-item h3 {
+    font-size: 18px;
+    color: #1a3c34;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.awards-scroll .award-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Horizontal Scrolling Brands Section */
+.brands-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    margin: 0 -20px;
+}
+
+.brands-scroll {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    min-width: max-content;
+    align-items: center;
+}
+
+.brands-scroll .brand-logo {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.brands-scroll .brand-logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: #2e6b5a;
+}
+
+.brands-scroll .brand-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.brands-scroll .brand-logo:hover img {
+    filter: grayscale(0%);
+}
+
+/* Custom Scrollbar Styling */
+.awards-scroll-container::-webkit-scrollbar,
+.brands-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.awards-scroll-container::-webkit-scrollbar-track,
+.brands-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.awards-scroll-container::-webkit-scrollbar-thumb,
+.brands-scroll-container::-webkit-scrollbar-thumb {
+    background: #2e6b5a;
+    border-radius: 3px;
+}
+
+.awards-scroll-container::-webkit-scrollbar-thumb:hover,
+.brands-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #1a3c34;
+}
+
+/* Mobile Responsiveness for Scrolling Sections */
+@media (max-width: 768px) {
+    .awards-scroll {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .awards-scroll .award-item {
+        width: 240px;
+        padding: 25px 15px;
+    }
+    
+    .awards-scroll .award-item img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .awards-scroll .award-item h3 {
+        font-size: 16px;
+    }
+    
+    .brands-scroll {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .brands-scroll .brand-logo {
+        width: 140px;
+        height: 80px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .awards-scroll .award-item {
+        width: 200px;
+        padding: 20px 12px;
+    }
+    
+    .awards-scroll .award-item img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .awards-scroll .award-item h3 {
+        font-size: 14px;
+    }
+    
+    .brands-scroll .brand-logo {
+        width: 120px;
+        height: 70px;
+        padding: 12px;
+    }
+}
+
+/* Spacing Optimizations for Better Layout */
+
+/* Reduce excessive spacing in service sections */
+.service-section {
+    padding: 30px 0; /* Reduced spacing for service sections */
+}
+
+.service-section h2 {
+    margin-bottom: 20px; /* Reduced heading margin */
+}
+
+.service-section p {
+    margin-bottom: 15px; /* Reduced paragraph spacing */
+}
+
+/* Optimize hero content spacing */
+.hero h1 {
+    margin-bottom: 15px; /* Reduced from default */
+}
+
+.hero p {
+    margin-bottom: 20px; /* Reduced from 30px */
+}
+
+/* Reduce container padding for tighter layout */
+.container {
+    padding: 5px 0; /* Reduced from 10px */
+}
+
+/* Optimize case study grid spacing */
+.case-studies-grid {
+    gap: 20px; /* Reduced gap between case study cards */
+    margin-bottom: 30px; /* Reduced bottom margin */
+}
+
+/* Optimize testimonials section spacing */
+.testimonials-section {
+    padding: 35px 0; /* Reduced from default section padding */
+}
+
+.testimonials-container {
+    gap: 15px; /* Reduced gap between testimonials */
+}
+
+/* Optimize awards and brands sections */
+.awards, .trusted-brands {
+    padding: 35px 0; /* Reduced section padding */
+}
+
+.awards h2, .trusted-brands h2 {
+    margin-bottom: 25px; /* Reduced heading margin */
+}
+
+/* Optimize contact sections */
+.contact-home, .contact-section {
+    padding: 35px 0; /* Reduced padding */
+}
+
+/* Mobile optimizations for spacing */
+@media (max-width: 768px) {
+    section {
+        padding: 25px 0; /* Further reduced for mobile */
+    }
+    
+    section h2 {
+        margin-bottom: 20px; /* Reduced mobile heading margin */
+        font-size: 32px; /* Slightly smaller on mobile */
+    }
+    
+    .hero {
+        padding: 60px 0 40px 0; /* Reduced mobile hero padding */
+    }
+    
+    .service-grid {
+        gap: 15px; /* Reduced mobile grid gap */
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 20px 0; /* Minimal padding for small screens */
+    }
+    
+    section h2 {
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+    
+    .hero {
+        padding: 50px 0 30px 0;
+    }
+}
+
+/* Free Audit Button in Header */
+.btn-small {
+    background: linear-gradient(135deg, #2e6b5a 0%, #1a3c34 100%);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.btn-small:hover {
+    background: linear-gradient(135deg, #1a3c34 0%, #2e6b5a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 107, 90, 0.3);
+    color: white !important;
+}
+
+.btn-small::after {
+    display: none; /* Remove the underline effect for buttons */
+}
+
+/* Header scrolled state for Free Audit button */
+header.scrolled .btn-small {
+    background: linear-gradient(135deg, #2e6b5a 0%, #1a3c34 100%);
+    color: white !important;
+}
+
+header.scrolled .btn-small:hover {
+    background: linear-gradient(135deg, #1a3c34 0%, #2e6b5a 100%);
+    color: white !important;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(238, 238, 238, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #1a3c34;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #2e6b5a;
+    padding-left: 25px;
+}
+
+.dropdown-menu li a::after {
+    display: none;
+}
+
+/* Ensure dropdown works on mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        min-width: auto;
+        padding: 0;
+        margin-left: 20px;
+    }
+    
+    .dropdown-menu li a {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+    
+    .dropdown-menu li a:hover {
+        padding-left: 0;
+        background-color: transparent;
+    }
+}
+

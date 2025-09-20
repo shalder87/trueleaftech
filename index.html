@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueLeafTech - Amazon Virtual Assistant Services | E-commerce Growth Experts</title>
+    <meta name="description" content="TrueLeafTech provides expert Amazon virtual assistant services to boost your e-commerce sales. PPC management, listing optimization, and comprehensive Amazon seller support.">
+    <meta name="keywords" content="amazon virtual assistant, amazon ppc management, amazon listing optimization, e-commerce services, amazon seller support">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Hero Section with Video Background */
+        .hero-homepage {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 60, 52, 0.8) 0%, rgba(46, 107, 90, 0.6) 100%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #2e6b5a 0%, #1a3c34 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(46, 107, 90, 0.4);
+        }
+        
+        /* Zig-Zag Services Section */
+        .services-zigzag {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+        
+        .service-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .service-content {
+            flex: 1;
+            padding: 2rem;
+        }
+        
+        .service-image {
+            flex: 1;
+            padding: 2rem;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-content h3 {
+            font-size: 2.5rem;
+            color: #1a3c34;
+            margin-bottom: 1rem;
+        }
+        
+        .service-content p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .service-link {
+            display: inline-block;
+            color: #2e6b5a;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid #2e6b5a;
+            transition: all 0.3s ease;
+        }
+        
+        .service-link:hover {
+            color: #1a3c34;
+            border-bottom-color: #1a3c34;
+        }
+        
+        /* Awards Section */
+        .awards-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #1a3c34 0%, #2e6b5a 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            padding: 0 2rem;
+        }
+        
+        .award-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .award-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a3c34;
+        }
+        
+        /* Trusted By Section */
+        .trusted-by {
+            padding: 6rem 0;
+            background: white;
+            text-align: center;
+        }
+        
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            padding: 0 2rem;
+        }
+        
+        .client-logo {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Case Studies Section */
+        .case-studies-home {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding: 0 2rem;
+        }
+        
+        .case-study-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .case-study-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .case-study-card-content {
+            padding: 1.5rem;
+        }
+        
+        .case-study-card h4 {
+            font-size: 1.3rem;
+            color: #1a3c34;
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 6rem 0;
+            background: white;
+            overflow: hidden;
+        }
+        
+        .testimonials-container {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+        
+        .testimonial-item {
+            min-width: 400px;
+            margin-right: 2rem;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #2e6b5a;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #1a3c34;
+        }
+        
+        /* Contact Section */
+        .contact-home {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #2e6b5a 0%, #1a3c34 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .contact-cta {
+            display: inline-block;
+            background: white;
+            color: #1a3c34;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .service-item {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            
+            .service-content h3 {
+                font-size: 2rem;
+            }
+            
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-item {
+                min-width: 300px;
+            }
+        }
+    </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2MVMDXN6T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2MVMDXN6T');
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">TrueLeafTech</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amazon-ppc-management.html">Amazon PPC Management</a></li>
+                            <li><a href="amazon-listing-optimization.html">Listing Optimization</a></li>
+                            <li><a href="amazon-posts-social-media.html">Amazon Posts & Social Media</a></li>
+                            <li><a href="amazon-customer-service-management.html">Amazon Customer Service Management</a></li>
+                            <li><a href="amazon-product-research-services.html">Amazon Product Research Services</a></li>
+                            <li><a href="amazon-review-management-services.html">Amazon Review Management Services</a></li>
+                            <li><a href="amazon-account-audit-health-services.html">Amazon Account Audit & Health Services</a></li>
+                            <li><a href="amazon-fba-returns-reimbursement-services.html">Amazon FBA Returns & Reimbursement Services</a></li>
+                            <li><a href="walmart-marketplace-management-services.html">Walmart Marketplace Management Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="free-audit.html" class="btn btn-small">Free Audit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Video Background -->
+        <section class="hero hero-homepage">
+            <video class="hero-video" autoplay muted loop>
+                <source src="videos/homepage_hero_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Accelerating Growth Through Amazon Excellence</h1>
+                <p>Your trusted partner for scaling e-commerce success with expert virtual assistant services</p>
+                <a href="free-audit.html" class="hero-cta">Get Your Free Audit</a>
+            </div>
+        </section>
+
+        <!-- Zig-Zag Services Section -->
+        <section class="services-zigzag">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 3rem; color: #1a3c34; margin-bottom: 4rem;">Our Core Services</h2>
+                
+                <div class="service-item">
+                    <div class="service-content">
+                        <h3>Amazon PPC Management</h3>
+                        <p>Drive targeted traffic and maximize ROI with our data-driven PPC strategies. Our experts optimize campaigns, reduce ACOS, and scale profitable ad spend to boost your Amazon sales.</p>
+                        <a href="amazon-ppc-management.html" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/hero_amazon_va.png" alt="Amazon PPC Management">
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-content">
+                        <h3>Listing Optimization</h3>
+                        <p>Transform your product listings into conversion machines. We optimize titles, descriptions, images, and keywords to improve search rankings and increase sales velocity.</p>
+                        <a href="amazon-listing-optimization.html" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/hero_services.png" alt="Amazon Listing Optimization">
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-content">
+                        <h3>Multi-Platform Management</h3>
+                        <p>Expand beyond Amazon with our comprehensive multi-platform services. We manage your presence on Walmart, TikTok Shop, Shopify, and more to maximize your reach.</p>
+                        <a href="multi-platform-inventory-management-services.html" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/hero_contact.png" alt="Multi-Platform Management">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Recognition Section -->
+        <section class="awards">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 3rem; color: #1a3c34; margin-bottom: 1rem;">Industry Recognition</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem;">Trusted by industry leaders and recognized for excellence</p>
+                <div class="awards-scroll-container">
+                    <div class="awards-scroll">
+                        <div class="award-item">
+                            <img src="images/award_amazon_ads_partner.png" alt="Amazon Ads Partner Awards 2023-2024" />
+                            <h3>Amazon Ads Partner Awards</h3>
+                            <p>2023 & 2024</p>
+                        </div>
+                        <div class="award-item">
+                            <img src="images/award_bigcommerce_global.png" alt="BigCommerce Global Partner Awards 2023" />
+                            <h3>BigCommerce Global Partner Awards</h3>
+                            <p>2023</p>
+                        </div>
+                        <div class="award-item">
+                            <img src="images/award_ecommerce_business.png" alt="Ecommerce Business Awards 2025" />
+                            <h3>Ecommerce Business Awards</h3>
+                            <p>2025</p>
+                        </div>
+                        <div class="award-item">
+                            <img src="images/award_shopify_expert.png" alt="Shopify Expert Partner" />
+                            <h3>Shopify Expert Partner</h3>
+                            <p>Certified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted by Leading Brands Section -->
+        <section class="trusted-brands">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 3rem; color: #1a3c34; margin-bottom: 1rem;">Trusted by Leading Brands</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem;">Join successful brands who trust TrueLeafTech</p>
+                <div class="brands-scroll-container">
+                    <div class="brands-scroll">
+                        <div class="brand-logo">
+                            <img src="images/client_logo_techgear_pro.png" alt="TechGear Pro" />
+                        </div>
+                        <div class="brand-logo">
+                            <img src="images/client_logo_ecoclean_innovations.png" alt="EcoClean Innovations" />
+                        </div>
+                        <div class="brand-logo">
+                            <img src="images/client_logo_urbangrow_solutions.png" alt="UrbanGrow Solutions" />
+                        </div>
+                        <div class="brand-logo">
+                            <img src="images/client_logo_luxeliving_home.png" alt="LuxeLiving Home" />
+                        </div>
+                        <div class="brand-logo">
+                            <img src="images/client_logo_freshbite_organics.png" alt="FreshBite Organics" />
+                        </div>
+                        <div class="brand-logo">
+                            <img src="images/client_logo_autorevive_parts.png" alt="AutoRevive Parts" />
+                        </div>
+                        <div class="brand-logo">
+                            <img src="images/client_logo_greenthumb_gardens.png" alt="GreenThumb Gardens" />
+                        </div>
+                        <div class="brand-logo">
+                            <img src="images/client_logo_steamtech_solutions.png" alt="SteamTech Solutions" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section class="case-studies-home">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 3rem; color: #1a3c34; margin-bottom: 1rem;">Success Stories</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem;">Real results from real clients</p>
+                
+                <div class="case-studies-grid" style="grid-template-columns: repeat(4, 1fr); max-width: 1200px;">
+                    <a href="case-study-steamtech-solutions.html" class="case-study-card">
+                        <img src="images/case_study_portable_steamer.png" alt="SteamTech Solutions">
+                        <div class="case-study-card-content">
+                            <h4>SteamTech Solutions</h4>
+                            <p>150% sales increase through PPC optimization and listing enhancements</p>
+                        </div>
+                    </a>
+                    <a href="case-study-ethical-footwear.html" class="case-study-card">
+                        <img src="images/case_study_ethical_footwear.png" alt="Ethical Footwear Brand">
+                        <div class="case-study-card-content">
+                            <h4>Ethical Footwear Brand</h4>
+                            <p>291% revenue growth with catalog restructuring and targeted advertising</p>
+                        </div>
+                    </a>
+                    <a href="case-study-wellness-device-brand.html" class="case-study-card">
+                        <img src="images/case_study_wellness_device.png" alt="Wellness Device Brand">
+                        <div class="case-study-card-content">
+                            <h4>Wellness Device Brand</h4>
+                            <p>45% conversion rate increase through strategic market expansion</p>
+                        </div>
+                    </a>
+                    <a href="case-study-outdoor-equipment-retailer.html" class="case-study-card">
+                        <img src="images/case_study_outdoor_equipment.png" alt="Outdoor Equipment Retailer">
+                        <div class="case-study-card-content">
+                            <h4>Outdoor Equipment Retailer</h4>
+                            <p>30% reduction in FBA storage fees with optimized inventory management</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="case-studies.html" class="service-link" style="font-size: 1.2rem;">View All Case Studies →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 3rem; color: #1a3c34; margin-bottom: 3rem;">What Our Clients Say</h2>
+                
+                <div class="testimonials-container">
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">"TrueLeafTech transformed our Amazon business. Our sales increased by 240% in just 6 months!"</div>
+                        <div class="testimonial-author">- Sarah Johnson, TechGear Pro</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">"The PPC management service is outstanding. Our ACOS dropped by 35% while sales doubled."</div>
+                        <div class="testimonial-author">- Mike Chen, EcoClean Innovations</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">"Professional, reliable, and results-driven. TrueLeafTech is the best investment we've made."</div>
+                        <div class="testimonial-author">- Lisa Rodriguez, UrbanGrow Solutions</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">"Their listing optimization increased our conversion rate by 45%. Highly recommended!"</div>
+                        <div class="testimonial-author">- David Park, LuxeLiving Home</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">"TrueLeafTech helped us expand to multiple platforms. Our revenue grew by 70%."</div>
+                        <div class="testimonial-author">- Emma Thompson, FreshBite Organics</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">"Excellent customer service and amazing results. They truly understand Amazon."</div>
+                        <div class="testimonial-author">- James Wilson, AutoRevive Parts</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-home">
+            <div class="container">
+                <div class="contact-content">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem;">Ready to Scale Your Business?</h2>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">Join hundreds of successful sellers who trust TrueLeafTech to grow their Amazon business. Get started with a free audit today.</p>
+                    <a href="contact.html" class="contact-cta">Get Started Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TrueLeafTech. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="header-scroll.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+

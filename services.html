@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - TrueLeafTech</title>
+    <meta name="description" content="Explore TrueLeafTech's comprehensive Amazon VA services including PPC, listing optimization, account management, and more.">
+    <meta name="keywords" content="amazon ppc management, amazon listing optimization, amazon account management, amazon inventory management, amazon brand store, amazon posts, amazon analytics">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .services-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+        
+        .services-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .services-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+        
+        .service-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 0;
+        }
+        
+        .service-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .service-text {
+            padding: 1rem 0;
+        }
+        
+        .service-text h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .service-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .service-features li {
+            padding: 0.3rem 0;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .service-visual {
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--service-color, #667eea), var(--service-color-alt, #764ba2));
+            opacity: 0.9;
+        }
+        
+        .service-visual-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+        
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .service-cta {
+            display: inline-block;
+            background: white;
+            color: #333;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Service-specific colors */
+        .ppc-section {
+            --service-color: #667eea;
+            --service-color-alt: #764ba2;
+        }
+        
+        .listing-section {
+            --service-color: #4facfe;
+            --service-color-alt: #00f2fe;
+        }
+        
+        .account-section {
+            --service-color: #43e97b;
+            --service-color-alt: #38f9d7;
+        }
+        
+        .inventory-section {
+            --service-color: #fa709a;
+            --service-color-alt: #fee140;
+        }
+        
+        .brand-section {
+            --service-color: #a8edea;
+            --service-color-alt: #fed6e3;
+        }
+        
+        .social-section {
+            --service-color: #ff9a9e;
+            --service-color-alt: #fecfef;
+        }
+        
+        .analytics-section {
+            --service-color: #ffecd2;
+            --service-color-alt: #fcb69f;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            width: 40px;
+            height: 40px;
+            top: 80%;
+            left: 70%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+        
+        .service-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            color: white;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .service-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .service-text h2 {
+                font-size: 2rem;
+            }
+            
+            .service-visual {
+                height: 300px;
+            }
+            
+            .service-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2MVMDXN6T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2MVMDXN6T');
+</script>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">TrueLeafTech</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amazon-ppc-management.html">Amazon PPC Management</a></li>
+                            <li><a href="amazon-listing-optimization.html">Listing Optimization</a></li>
+                            <li><a href="amazon-posts-social-media.html">Amazon Posts & Social Media</a></li>
+                            <li><a href="amazon-customer-service-management.html">Amazon Customer Service Management</a></li>
+                            <li><a href="amazon-product-research-services.html">Amazon Product Research Services</a></li>
+                            <li><a href="amazon-review-management-services.html">Amazon Review Management Services</a></li>
+                            <li><a href="amazon-account-audit-health-services.html">Amazon Account Audit & Health Services</a></li>
+                            <li><a href="amazon-fba-returns-reimbursement-services.html">Amazon FBA Returns & Reimbursement Services</a></li>
+                            <li><a href="walmart-marketplace-management-services.html">Walmart Marketplace Management Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="free-audit.html" class="btn btn-small">Free Audit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-services">
+            <div class="container">
+                <h1>Comprehensive Amazon Services</h1>
+                <p>Elevate your Amazon business with our expert virtual assistant services designed to maximize growth and profitability.</p>
+            </div>
+        </section>
+
+        <section class="service-section ppc-section" id="ppc">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Amazon PPC Management</h2>
+                    <p>Transform your advertising spend into profitable growth with our expert PPC management. We optimize every aspect of your campaigns to maximize ROI and drive targeted sales.</p>
+                    <ul class="service-features">
+                        <li>Advanced keyword research and selection</li>
+                        <li>Real-time bid optimization</li>
+                        <li>Compelling ad copy creation</li>
+                        <li>Performance tracking and analytics</li>
+                        <li>Campaign scaling strategies</li>
+                    </ul>
+                    <a href="amazon-ppc-management.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🎯</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150%</span>
+                                <span class="stat-label">ROI Increase</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">40%</span>
+                                <span class="stat-label">ACOS Reduction</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Campaigns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section listing-section" id="listing">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">📝</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">125%</span>
+                                <span class="stat-label">Conversion Boost</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">300+</span>
+                                <span class="stat-label">Listings Optimized</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">85%</span>
+                                <span class="stat-label">Ranking Improvement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Listing Optimization</h2>
+                    <p>Transform your product listings into conversion machines with our SEO-optimized content that ranks higher and sells more.</p>
+                    <ul class="service-features">
+                        <li>Keyword-rich title optimization</li>
+                        <li>Compelling bullet points</li>
+                        <li>A+ Content creation</li>
+                        <li>Image optimization</li>
+                        <li>Competitor analysis</li>
+                    </ul>
+                    <a href="amazon-listing-optimization.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section social-section" id="social-media">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Amazon Posts & Social Media</h2>
+                    <p>Amplify your brand presence and drive engagement with strategic Amazon Posts and integrated social media campaigns.</p>
+                    <ul class="service-features">
+                        <li>Amazon Posts strategy</li>
+                        <li>Content creation and scheduling</li>
+                        <li>Community management</li>
+                        <li>Performance analytics</li>
+                        <li>Influencer partnerships</li>
+                    </ul>
+                    <a href="amazon-posts-social-media.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">📱</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">200%</span>
+                                <span class="stat-label">Engagement Boost</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Posts Created</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Client Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 4rem 0;">
+            <h2 style="text-align: center; margin-bottom: 3rem;" class="fade-in-up">What We Do</h2>
+            <div class="three-block-container">
+                <div class="block-item fade-in-up">
+                    <span class="block-icon">🎯</span>
+                    <h3 class="block-title">Performance Optimization</h3>
+                    <p class="block-description">We quickly analyze and optimize your Amazon performance, often using existing assets, to test against specific audiences and drive measurable ROI from your efforts.</p>
+                </div>
+                <div class="block-item fade-in-up">
+                    <span class="block-icon">📊</span>
+                    <h3 class="block-title">Data-Driven Strategies</h3>
+                    <p class="block-description">Unlock limitless growth potential from your existing Amazon presence with fresh strategies, advanced analytics, and performance-based optimizations.</p>
+                </div>
+                <div class="block-item fade-in-up">
+                    <span class="block-icon">🚀</span>
+                    <h3 class="block-title">Scalable Solutions</h3>
+                    <p class="block-description">Stand out in the competitive Amazon marketplace with scalable solutions, including automation, advanced tools, and strategic growth planning.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="success-story">
+            <div class="container">
+                <div class="success-content">
+                    <div class="success-image fade-in-left">
+                        <img src="images/hero_amazon_va.png" alt="Success Story" style="width: 100%; height: 300px; object-fit: cover;">
+                    </div>
+                    <div class="success-text fade-in-right">
+                        <h3>Powering 240% More Sales for TechGear Pro</h3>
+                        <p>Leveraging our insights in Amazon optimization, we partnered with TechGear Pro to help accelerate their growth and keep up with increasing demand. Through strategic PPC management and listing optimization, we achieved remarkable results.</p>
+                        <a href="case-study-tech-accessories-firm.html" class="success-cta">See Full Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="service-section customer-service-section" id="customer-service">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Amazon Customer Service Management</h2>
+                    <p>Deliver exceptional customer experiences and maintain a stellar seller reputation with our proactive customer service management.</p>
+                    <ul class="service-features">
+                        <li>Prompt inquiry responses</li>
+                        <li>Order issue resolution</li>
+                        <li>Buyer-seller messaging management</li>
+                        <li>Feedback and review monitoring</li>
+                        <li>Returns and refunds assistance</li>
+                    </ul>
+                    <a href="amazon-customer-service-management.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">💬</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Tickets Handled</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section product-research-section" id="product-research">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🔍</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Products Sourced</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20%</span>
+                                <span class="stat-label">Profit Margin</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Amazon Product Research Services</h2>
+                    <p>Uncover profitable niches and high-demand products with our in-depth market analysis and product research expertise.</p>
+                    <ul class="service-features">
+                        <li>Niche identification</li>
+                        <li>Competitor analysis</li>
+                        <li>Supplier sourcing</li>
+                        <li>Profitability analysis</li>
+                        <li>Trend forecasting</li>
+                    </ul>
+                    <a href="amazon-product-research-services.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section review-management-section" id="review-management">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Amazon Review Management Services</h2>
+                    <p>Build trust and boost sales by actively managing and optimizing your product reviews and seller feedback.</p>
+                    <ul class="service-features">
+                        <li>Review monitoring and analysis</li>
+                        <li>Positive review generation strategies</li>
+                        <li>Negative review mitigation</li>
+                        <li>Seller feedback management</li>
+                        <li>Review policy compliance</li>
+                    </ul>
+                    <a href="amazon-review-management-services.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">⭐</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4.8</span>
+                                <span class="stat-label">Avg. Rating</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20%</span>
+                                <span class="stat-label">Review Growth</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">90%</span>
+                                <span class="stat-label">Issue Resolution</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section account-audit-section" id="account-audit">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🩺</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Audits</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Health Score</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">30%</span>
+                                <span class="stat-label">Issue Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Amazon Account Audit & Health Services</h2>
+                    <p>Ensure your Amazon account is in peak condition with our comprehensive audits and proactive health management.</p>
+                    <ul class="service-features">
+                        <li>Performance metric analysis</li>
+                        <li>Policy compliance checks</li>
+                        <li>Listing quality assessment</li>
+                        <li>Account health dashboard monitoring</li>
+                        <li>Proactive issue identification</li>
+                    </ul>
+                    <a href="amazon-account-audit-health-services.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section suspension-appeal-section" id="suspension-appeal">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Amazon Suspension Appeal & Reinstatement Services</h2>
+                    <p>Get your Amazon selling privileges back with our expert appeal strategies and reinstatement services.</p>
+                    <ul class="service-features">
+                        <li>Root cause analysis</li>
+                        <li>Plan of Action (POA) creation</li>
+                        <li>Appeal submission and follow-up</li>
+                        <li>Performance notification management</li>
+                        <li>Preventative measures consultation</li>
+                    </ul>
+                    <a href="amazon-suspension-appeal-reinstatement-services.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🚨</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">90%</span>
+                                <span class="stat-label">Reinstatement</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Emergency Support</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Successful Appeals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section photography-design-section" id="photography-design">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">📸</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150%</span>
+                                <span class="stat-label">Conversion Boost</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Images Created</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">99%</span>
+                                <span class="stat-label">Client Approval</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Amazon Product Photography & Design Services</h2>
+                    <p>Captivate buyers with stunning product visuals and compelling A+ Content design that drives conversions.</p>
+                    <ul class="service-features">
+                        <li>High-quality product photography</li>
+                        <li>Lifestyle image creation</li>
+                        <li>Infographic design</li>
+                        <li>A+ Content & Brand Story design</li>
+                        <li>Video shorts for listings</li>
+                    </ul>
+                    <a href="amazon-product-photography-design-services.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section trademark-brand-registry-section" id="trademark-brand-registry">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Amazon Trademark & Brand Registry Services</h2>
+                    <p>Protect your brand and unlock exclusive selling tools with our expert trademark registration and Brand Registry services.</p>
+                    <ul class="service-features">
+                        <li>Trademark search and application</li>
+                        <li>Brand Registry enrollment</li>
+                        <li>Brand protection strategies</li>
+                        <li>Counterfeit removal assistance</li>
+                        <li>Enhanced brand content access</li>
+                    </ul>
+                    <a href="amazon-trademark-brand-registry-services.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">®️</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">99%</span>
+                                <span class="stat-label">Success Rate</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Brands Protected</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">IP Infringement Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section fba-returns-reimbursement-section" id="fba-returns-reimbursement">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">↩️</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">$10K+</span>
+                                <span class="stat-label">Recovered</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">90%</span>
+                                <span class="stat-label">Claim Success</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20%</span>
+                                <span class="stat-label">Return Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Amazon FBA Returns & Reimbursement Services</h2>
+                    <p>Maximize your profits by efficiently managing FBA returns and recovering lost inventory reimbursements from Amazon.</p>
+                    <ul class="service-features">
+                        <li>FBA return reconciliation</li>
+                        <li>Lost & damaged inventory claims</li>
+                        <li>Overcharge fee recovery</li>
+                        <li>Discrepancy reporting</li>
+                        <li>Proactive reimbursement audits</li>
+                    </ul>
+                    <a href="amazon-fba-returns-reimbursement-services.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section vendor-central-section" id="vendor-central">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Amazon Vendor Central Management Services</h2>
+                    <p>Optimize your wholesale relationship with Amazon, ensuring efficient operations and maximizing profitability.</p>
+                    <ul class="service-features">
+                        <li>Purchase Order (PO) management</li>
+                        <li>Chargeback & deduction disputes</li>
+                        <li>Operational compliance</li>
+                        <li>Inventory management & forecasting</li>
+                        <li>Promotional planning</li>
+                    </ul>
+                    <a href="amazon-vendor-central-management-services.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">📦</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">30%</span>
+                                <span class="stat-label">Chargeback Reduction</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">PO Compliance</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10%</span>
+                                <span class="stat-label">Profit Increase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section walmart-marketplace-section" id="walmart-marketplace">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🛒</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">Sales Growth</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Listings</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">90%</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Walmart Marketplace Management Services</h2>
+                    <p>Expand your e-commerce reach and tap into Walmart's vast customer base with our expert marketplace management.</p>
+                    <ul class="service-features">
+                        <li>Account setup & onboarding</li>
+                        <li>Product listing optimization</li>
+                        <li>Inventory management</li>
+                        <li>Walmart Connect advertising</li>
+                        <li>Order processing & fulfillment</li>
+                    </ul>
+                    <a href="walmart-marketplace-management-services.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section tiktok-shop-section" id="tiktok-shop">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>TikTok Shop Management Services</h2>
+                    <p>Harness the power of social commerce and drive sales on TikTok's rapidly growing shopping platform.</p>
+                    <ul class="service-features">
+                        <li>Shop setup & onboarding</li>
+                        <li>Product listing optimization</li>
+                        <li>Content strategy & creation</li>
+                        <li>Live stream support</li>
+                        <li>Order processing & fulfillment</li>
+                    </ul>
+                    <a href="tiktok-shop-management-services.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🎵</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">200%</span>
+                                <span class="stat-label">Engagement</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100K+</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">30%</span>
+                                <span class="stat-label">Conversion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section shopify-store-section" id="shopify-store">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🛍️</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150%</span>
+                                <span class="stat-label">Sales Growth</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Products Managed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Order Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Shopify Store Management Services</h2>
+                    <p>Build and grow your direct-to-consumer brand with expert management of your Shopify store operations.</p>
+                    <ul class="service-features">
+                        <li>Store setup & configuration</li>
+                        <li>Product uploads & management</li>
+                        <li>Inventory management</li>
+                        <li>Order processing & fulfillment</li>
+                        <li>App & plugin management</li>
+                    </ul>
+                    <a href="shopify-store-management-services.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section multi-platform-inventory-section" id="multi-platform-inventory">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>Multi-Platform Inventory Management Services</h2>
+                    <p>Achieve seamless stock control across all your sales channels, preventing overselling and stockouts.</p>
+                    <ul class="service-features">
+                        <li>Centralized inventory sync</li>
+                        <li>Real-time updates</li>
+                        <li>Stockout prevention</li>
+                        <li>Warehouse integration</li>
+                        <li>Forecasting & planning</li>
+                    </ul>
+                    <a href="multi-platform-inventory-management-services.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">📦</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">99%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">0%</span>
+                                <span class="stat-label">Overselling</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20%</span>
+                                <span class="stat-label">Cost Savings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section omnichannel-advertising-section" id="omnichannel-advertising">
+            <div class="service-content">
+                <div class="service-visual fade-in-left">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">📣</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">200%</span>
+                                <span class="stat-label">Reach</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">ROI Increase</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Platforms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-text fade-in-right">
+                    <h2>Omnichannel E-commerce Advertising Services</h2>
+                    <p>Unify your advertising efforts across all platforms for maximum reach, consistent messaging, and higher ROI.</p>
+                    <ul class="service-features">
+                        <li>Strategy development</li>
+                        <li>Amazon Ads management</li>
+                        <li>Google Ads management</li>
+                        <li>Social media advertising</li>
+                        <li>Performance monitoring & optimization</li>
+                    </ul>
+                    <a href="omnichannel-ecommerce-advertising-services.html" class="service-cta">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section logistics-fulfillment-section" id="logistics-fulfillment">
+            <div class="service-content">
+                <div class="service-text fade-in-left">
+                    <h2>E-commerce Logistics & Fulfillment Services</h2>
+                    <p>Streamline your supply chain from click to customer with efficient logistics and fulfillment solutions.</p>
+                    <ul class="service-features">
+                        <li>3PL integration</li>
+                        <li>Shipping optimization</li>
+                        <li>Order processing & management</li>
+                        <li>Returns management</li>
+                        <li>Inventory tracking</li>
+                    </ul>
+                    <a href="ecommerce-logistics-fulfillment-services.html" class="service-cta">Learn More</a>
+                </div>
+                <div class="service-visual fade-in-right">
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <div class="service-visual-content">
+                        <span class="service-icon">🚚</span>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">20%</span>
+                                <span class="stat-label">Cost Reduction</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">99%</span>
+                                <span class="stat-label">On-Time Delivery</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Orders Processed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact Section moved to bottom -->
+    <section class="contact-form-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;" class="fade-in-up">Ready to Grow Your Business?</h2>
+            <div style="text-align: center;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Let's discuss how we can help accelerate your e-commerce success.</p>
+                <a href="contact.html" class="service-cta" style="display: inline-block; padding: 15px 30px; font-size: 1.1rem;">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TrueLeafTech. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="header-scroll.js"></script>
+    <script src="scroll-animations.js"></script>
+    <script src="advanced-scroll-animations.js"></script>
+</body>
+</html>
+

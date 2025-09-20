@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Amazon Audit - TrueLeafTech</title>
+    <meta name="description" content="Get a free comprehensive Amazon audit from TrueLeafTech experts. Analyze your listings, PPC, and growth opportunities.">
+    <meta name="keywords" content="free amazon audit, amazon listing analysis, ppc audit, amazon optimization">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .audit-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .audit-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .audit-intro h2 {
+            font-size: 2.5rem;
+            color: #1a3c34;
+            margin-bottom: 1rem;
+        }
+        
+        .audit-intro p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .audit-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .audit-form-section {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .audit-form-section h3 {
+            color: #1a3c34;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a3c34;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2e6b5a;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #2e6b5a, #1a3c34);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .audit-benefits {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+        
+        .audit-benefits h3 {
+            color: #1a3c34;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .benefits-list li::before {
+            content: "✅";
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .audit-process {
+            grid-column: 1 / -1;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        .audit-process h3 {
+            color: #1a3c34;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .process-step .step-number {
+            background: linear-gradient(135deg, #2e6b5a, #1a3c34);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .process-step h4 {
+            color: #1a3c34;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #1a3c34, #2e6b5a);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        .testimonial-section h3 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        .faq-section {
+            grid-column: 1 / -1;
+            margin-top: 4rem;
+        }
+        
+        .faq-section h3 {
+            color: #1a3c34;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            padding: 1.5rem;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a3c34;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            display: none;
+            color: #666;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+        
+        .faq-question::after {
+            content: "▼";
+            transition: transform 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .audit-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .audit-container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2MVMDXN6T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L2MVMDXN6T');
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">TrueLeafTech</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                        <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amazon-ppc-management.html">Amazon PPC Management</a></li>
+                            <li><a href="amazon-listing-optimization.html">Listing Optimization</a></li>
+                            <li><a href="amazon-posts-social-media.html">Amazon Posts & Social Media</a></li>
+                            <li><a href="amazon-customer-service-management.html">Amazon Customer Service Management</a></li>
+                            <li><a href="amazon-product-research-services.html">Amazon Product Research Services</a></li>
+                            <li><a href="amazon-review-management-services.html">Amazon Review Management Services</a></li>
+                            <li><a href="amazon-account-audit-health-services.html">Amazon Account Audit & Health Services</a></li>
+                            <li><a href="amazon-fba-returns-reimbursement-services.html">Amazon FBA Returns & Reimbursement Services</a></li>
+                            <li><a href="walmart-marketplace-management-services.html">Walmart Marketplace Management Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="free-audit.html" class="btn btn-small">Free Audit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-free-audit">
+            <div class="container">
+                <h1>Free Amazon Business Audit</h1>
+                <p>Get expert insights to optimize your Amazon performance and unlock hidden growth opportunities.</p>
+            </div>
+        </section>
+
+        <div class="audit-container">
+            <div class="audit-intro">
+                <h2>Discover Your Amazon Growth Potential</h2>
+                <p>Our comprehensive audit analyzes your Amazon business from every angle. Get personalized recommendations from our experts to boost your sales, optimize your listings, and maximize your ROI.</p>
+            </div>
+
+            <div class="audit-content">
+                <div class="audit-form-section">
+                    <h3>Get Your Free Audit</h3>
+                    <form id="audit-form" class="audit-form" action="https://formsubmit.co/saugata.1987@gmail.com" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company/Brand Name *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="asinLink">Your Main Amazon Product ASIN or Link *</label>
+                            <input type="url" id="asinLink" name="asinLink" placeholder="https://amazon.com/dp/B..." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="monthlyRevenue">Monthly Amazon Revenue *</label>
+                            <select id="monthlyRevenue" name="monthlyRevenue" required>
+                                <option value="">Select revenue range</option>
+                                <option value="Under $10,000">Under $10,000</option>
+                                <option value="$10,000 - $50,000">$10,000 - $50,000</option>
+                                <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                                <option value="$100,000 - $500,000">$100,000 - $500,000</option>
+                                <option value="$500,000 - $1,000,000">$500,000 - $1,000,000</option>
+                                <option value="Over $1,000,000">Over $1,000,000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="challenges">What are your biggest Amazon challenges?</label>
+                            <textarea id="challenges" name="challenges" rows="3" placeholder="e.g., Low conversion rates, high ACOS, poor rankings..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Get My Free Audit</button>
+                    </form>
+                </div>
+                
+                <div class="audit-benefits">
+                    <h3>What You'll Get</h3>
+                    <ul class="benefits-list">
+                        <li><strong>Listing Optimization Analysis</strong><br>SEO keywords, title optimization, bullet points review</li>
+                        <li><strong>PPC Performance Review</strong><br>Campaign structure, keyword analysis, bid optimization</li>
+                        <li><strong>Competitive Analysis</strong><br>How you stack up against top competitors</li>
+                        <li><strong>Conversion Rate Assessment</strong><br>Identify factors affecting your conversion rates</li>
+                        <li><strong>Growth Opportunities</strong><br>Untapped potential and expansion strategies</li>
+                        <li><strong>Personalized Action Plan</strong><br>Step-by-step recommendations for improvement</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="audit-process">
+                <h3>How Our Audit Process Works</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Submit Your Information</h4>
+                        <p>Fill out the form with your Amazon product details and business information.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Expert Analysis</h4>
+                        <p>Our Amazon specialists conduct a comprehensive review of your listings and performance.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Personalized Report</h4>
+                        <p>Receive a detailed audit report with actionable recommendations within 48 hours.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Strategy Call</h4>
+                        <p>Schedule a free consultation to discuss your results and next steps.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-section">
+                <h3>What Our Clients Say</h3>
+                <div class="testimonial">
+                    "The free audit from TrueLeafTech revealed optimization opportunities we never knew existed. Within 30 days of implementing their recommendations, our conversion rate increased by 40%!"
+                </div>
+                <div class="testimonial-author">- Sarah Johnson, CEO of EcoHome Products</div>
+            </div>
+            
+            <div class="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is this audit really free?
+                    </button>
+                    <div class="faq-answer">
+                        Yes, absolutely! Our comprehensive Amazon audit is completely free with no strings attached. We provide this service to help Amazon sellers understand their potential and showcase our expertise.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does the audit take?
+                    </button>
+                    <div class="faq-answer">
+                        Our team typically completes the audit within 48 hours of receiving your information. You'll receive a detailed report via email with all our findings and recommendations.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What information do you need from me?
+                    </button>
+                    <div class="faq-answer">
+                        We need your main Amazon product ASIN or link, basic business information, and details about your current challenges. This helps us provide the most relevant and actionable recommendations.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Will you share my information with others?
+                    </button>
+                    <div class="faq-answer">
+                        Never. Your business information is completely confidential and will only be used to prepare your audit. We take privacy and data security very seriously.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens after I receive my audit?
+                    </button>
+                    <div class="faq-answer">
+                        After receiving your audit, you can implement the recommendations yourself or schedule a free consultation to discuss how TrueLeafTech can help you execute the strategy. There's no obligation to work with us.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TrueLeafTech. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer    <script src="header-scroll.js"></script>
+    <script>
+        // AJAX form submission to prevent redirection
+        document.getElementById('audit-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Submit form via AJAX
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    showSuccessMessage();
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your audit request. Please try again.');
+            })
+            .finally(() => {
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+        
+        function showSuccessMessage() {
+            // Create success modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            `;
+            
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                text-align: center;
+                max-width: 400px;
+                margin: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            `;
+            
+            modalContent.innerHTML = `
+                <div style="color: #2e6b5a; font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                <h3 style="color: #1a3c34; margin-bottom: 1rem;">Audit Request Submitted!</h3>
+                <p style="color: #666; margin-bottom: 1.5rem;">Thank you! We'll analyze your Amazon business and send you a comprehensive audit report within 48 hours.</p>
+                <button onclick="this.closest('.modal').remove()" style="
+                    background: linear-gradient(135deg, #2e6b5a, #1a3c34);
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    font-weight: 600;
+                ">Close</button>
+            `;
+            
+            modal.className = 'modal';
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+        
+        // Handle FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other open FAQs
+                document.querySelectorAll('.faq-item.active').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
